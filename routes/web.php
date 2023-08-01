@@ -34,6 +34,7 @@ Route::get('/blog', function () {
     $blog_posts = [
         [
             "title" => "Judul 1",
+            "slug" => "judul-post-pertama",
             "author" => "Ericko",
             "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Vel, minima!.Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -45,6 +46,7 @@ Route::get('/blog', function () {
         ],
         [
             "title" => "Judul 2",
+            "slug" => "judul-post-kedua",
             "author" => "Rudi",
             "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, 
             ab quisquam. Temporibus rerum incidunt, ipsa quod modi odio praesentium tempore 
