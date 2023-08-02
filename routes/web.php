@@ -30,7 +30,7 @@ Route::get('/about', function () {
 
 
 
-Route::get('/blog', function () {
+Route::get('posts/{slug}', function($slug)  {
     $blog_posts = [
         [
             "title" => "Judul 1",
@@ -60,9 +60,18 @@ Route::get('/blog', function () {
         ],
     ];
 
-    return view ('posts', [
-        "title" => "Posts",
-        "posts" => $blog_posts
+     
+    $new_post = [];
+    foreach($blog_posts as $post) {
+        if($post["slug"] === $slug) {
+            $new_post = $post;
+        }
+    }
+
+    return view('post', [
+        "title" => "Single Post",
+        "post" => $new_post
 
     ]);
 });
+
